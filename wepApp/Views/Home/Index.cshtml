@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MyApp.Core.Entities.MyEntity>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyApp</title>
+</head>
+<body>
+    <h1>My Entities</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var entity in Model)
+            {
+                <tr>
+                    <td>@entity.Name</td>
+                    <td>@entity.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
